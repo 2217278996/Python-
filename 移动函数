@@ -1,0 +1,13 @@
+    def move(self):                    #雪花移动函数
+        if self.y >= -500:            #当雪花还在画布中时
+            self.y -= self.speed     #设置上下移动速度
+            self.x -= self.speed * math.sin(self.f)    #设置左右移动速度
+            self.f -= 0.1            #可以理解成标志，改变左右移动的方向
+        else:                        #当雪花漂出了画布时，重新生成一个雪花
+            self.r = 6        
+            self.x = ra.randint(-1000,1000)
+            self.y = 500
+            self.f = ra.uniform(-3.14,3.14)
+            self.speed = ra.randint(5,10)
+            self.color = ra.choice(colors)
+            self.outline = 5
