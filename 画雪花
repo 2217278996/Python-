@@ -1,0 +1,19 @@
+    def snow(self):                #画每个雪花
+        x=self.r                   #雪花的半径
+        t.pensize(self.outline)    #雪花的大小
+        t.penup()                  #提笔
+        t.goto(self.x,self.y)      #随机位置
+        t.pendown()                #落笔
+        t.color(self.color)        #雪花颜色
+        for i in range(6):        #循环画六个雪花瓣
+            t.forward(x*5)
+            t.backward(x*2)
+            t.left(60)
+            t.forward(x*2)
+            t.backward(x*2)
+            t.right(120)
+            t.forward(x*2)
+            t.backward(x*2)
+            t.left(60)
+            t.backward(x*3)
+            t.right(60)
